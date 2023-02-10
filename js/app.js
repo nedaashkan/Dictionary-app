@@ -9,6 +9,8 @@ let word = inputValue;
 let meaning;
 let wordType;
 let pronouns;
+let wordSound;
+let example;
 let displayExamplesRowContainer = document.getElementById(
   "examplesColContainer-el"
 );
@@ -16,11 +18,11 @@ let displayExamplesRowContainer = document.getElementById(
 let exampleColContainer = ` <div class="col-12 col-sm-10 col-md-8 col-lg-6">`;
 let ColContainer = `<div id="example-el" class="example-border w-100 mt-3">`;
 function searchButton() {
-    console.log("click search word");
-    searchWord(word);
+  console.log("click search word");
+  searchWord(word);
 }
 function searchWord() {
-    let apiUrl = "";
+  let apiUrl = "";
   let appKey = "";
   axios.get(apiUrl).then(displayAnswer);
 }
@@ -31,22 +33,16 @@ function displayAnswer(response) {
   pronouns = "/sɪˈriːn/";
   displayPronouns.textContent = pronouns;
   meaning = "calm, peaceful, and untroubled; tranquil.";
+  wordSound = "get word sound from api";
   displayMeaning.textContent = meaning;
+  example = "bring array from api";
+  displayExamples(example);
 }
 
 // examples display
-let example = [
-  {
-    sentence: "her eyes were closed and she looked very serene.",
-  },
-  {
-    sentence: "She smiled serenely.",
-  },
-  {
-    sentence: "The sunset was serenely beautiful.",
-  },
-];
-function displayExamples() {
+
+function displayExamples(example) {
+  let exampleArray = example;
   for (let i = 0; i < example.length; i++) {
     exampleColContainer =
       exampleColContainer +
@@ -60,10 +56,8 @@ function displayExamples() {
 }
 
 // word sound sapling
-let wordSound;
 function soundOnOff() {
-  wordSound = "get word sound from api";
-  console.log(wordSound);
+  return wordSound;
 }
 displayExamples();
 searchWord("serene");
