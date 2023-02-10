@@ -45,7 +45,12 @@
             />
           </div>
           <div class="col-4 col-sm-4 col-md-2 col-lg-2">
-            <button type="submit" class="search-btn w-100" id="button-el">
+            <button
+              type="submit"
+              class="search-btn w-100"
+              id="button-el"
+              onclick="searchButton()"
+            >
               Search
             </button>
           </div>
@@ -54,7 +59,7 @@
           class="row mt-4 gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
         >
           <div class="col-6 col-sm-5 col-md-4 col-lg-3">
-            <h1 id="word-el">serene</h1>
+            <h1 id="word-el"></h1>
           </div>
           <div
             class="col-6 col-sm-5 col-md-4 col-lg-3 d-flex justify-content-end"
@@ -62,6 +67,7 @@
             <i
               class="fa-solid fa-volume-high sound-icon mt-2"
               id="sound-el"
+              onclick="soundOnOff()"
             ></i>
           </div>
         </div>
@@ -69,28 +75,21 @@
           class="row gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
         >
           <div class="col-12 col-sm-10 col-md-8 col-lg-6">
-            <span id="word-type-el" class="w-100">adjective</span>
-            <span id="pronouns-el" class="w-100">/sɪˈriːn/</span>
+            <span id="word-type-el" class="w-100"></span>
+            <span id="pronouns-el" class="w-100"></span>
           </div>
         </div>
         <div
           class="row mt-4 gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
         >
           <div class="col-12 col-sm-10 col-md-8 col-lg-6">
-            <span class="w-100" id="meaning-el"
-              >calm, peaceful, and untroubled; tranquil.</span
-            >
+            <span class="w-100" id="meaning-el"></span>
           </div>
         </div>
         <div
           class="row mt-4 gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
-        >
-          <div class="col-12 col-sm-10 col-md-8 col-lg-6">
-            <div id="example-el" class="example-border w-100">
-              "her eyes were closed and she looked very serene"
-            </div>
-          </div>
-        </div>
+          id="examplesColContainer-el"
+        ></div>
       </div>
     </div>
     <script src="/js/app.js"></script>
