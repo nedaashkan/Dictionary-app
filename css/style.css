@@ -11,7 +11,7 @@ body {
 .dictionary-body {
   margin-top: 50px;
   background-color: #ffffff;
-  padding: 100px 50px;
+  padding: 100px 15px;
   border-radius: 10px;
   box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);
 }
@@ -33,6 +33,7 @@ body {
   outline: none;
   transition: all ease-in-out 250ms;
   border-radius: 5px;
+  text-align: center;
 }
 .search-btn:hover {
   background-color: #a394e7;
