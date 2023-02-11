@@ -46,7 +46,6 @@
           </div>
           <div class="col-4 col-sm-4 col-md-2 col-lg-2">
             <button
-              type="submit"
               class="search-btn w-100"
               id="button-el"
               onclick="searchButton()"
@@ -55,41 +54,44 @@
             </button>
           </div>
         </div>
-        <div
-          class="row mt-4 gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
-        >
-          <div class="col-6 col-sm-5 col-md-4 col-lg-3">
-            <h1 id="word-el"></h1>
+        <div id="dictionary-el">
+          <div
+            class="row mt-4 gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
+          >
+            <div class="col-6 col-sm-5 col-md-4 col-lg-3">
+              <h1 id="word-el"></h1>
+            </div>
+            <div
+              class="col-6 col-sm-5 col-md-4 col-lg-3 d-flex justify-content-end"
+            >
+              <a href="#" id="sound-link-el">
+                <i
+                  class="fa-solid fa-volume-high sound-icon mt-3"
+                  id="icon-el"
+                ></i>
+              </a>
+            </div>
           </div>
           <div
-            class="col-6 col-sm-5 col-md-4 col-lg-3 d-flex justify-content-end"
+            class="row gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
           >
-            <i
-              class="fa-solid fa-volume-high sound-icon mt-2"
-              id="sound-el"
-              onclick="soundOnOff()"
-            ></i>
+            <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+              <span id="word-type-el" class="w-100"></span>
+              <span id="pronouns-el" class="w-100"></span>
+            </div>
           </div>
-        </div>
-        <div
-          class="row gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
-        >
-          <div class="col-12 col-sm-10 col-md-8 col-lg-6">
-            <span id="word-type-el" class="w-100"></span>
-            <span id="pronouns-el" class="w-100"></span>
+          <div
+            class="row mt-4 gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
+          >
+            <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+              <span class="w-100" id="meaning-el"></span>
+            </div>
           </div>
+          <div
+            class="row mt-4 gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
+            id="examplesColContainer-el"
+          ></div>
         </div>
-        <div
-          class="row mt-4 gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
-        >
-          <div class="col-12 col-sm-10 col-md-8 col-lg-6">
-            <span class="w-100" id="meaning-el"></span>
-          </div>
-        </div>
-        <div
-          class="row mt-4 gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
-          id="examplesColContainer-el"
-        ></div>
       </div>
     </div>
     <script src="/js/app.js"></script>
