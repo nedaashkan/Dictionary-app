@@ -32,7 +32,6 @@ function searchWord(word) {
   axios.get(apiUrl).then(displayAnswer);
 }
 function displayAnswer(response) {
-  console.log(response);
   wordType = response.data[0].meanings[0].partOfSpeech;
   displayWordType.textContent = wordType;
   displayWord.textContent = response.data[0].word;
@@ -58,9 +57,9 @@ function displayMeanings(meaningArray) {
   displayMeaning.textContent = liveMeaningArray[0];
   liveMeaningArray = [];
 }
-
 let exampleColContainer = ` <div class="col-12 col-sm-10 col-md-8 col-lg-6">`;
 function displayExamples(exampleArray) {
+  debugger
   let theExampleArray = exampleArray;
   for (let i = 0; i < theExampleArray.length; i++) {
     if (theExampleArray[i].example === undefined) {
@@ -68,9 +67,9 @@ function displayExamples(exampleArray) {
       exampleColContainer =
         exampleColContainer +
         `<div id="example-el" class="example-border w-100 mt-3">
-                ${theExampleArray[i].example}
-              </div>
-  `;
+      ${theExampleArray[i].example}
+      </div>
+      `;
     }
   }
   exampleColContainer = exampleColContainer + `</div>`;

@@ -8,10 +8,15 @@ body {
   font-size: 18px;
   font-family: "Poppins", sans-serif;
 }
+.dictionary-app {
+  background-color: #ae9cff;
+  max-width: 800px;
+  margin: 10px auto 0;
+}
 .dictionary-body {
-  margin-top: 50px;
+  margin: 40px auto 20px;
   background-color: #ffffff;
-  padding: 100px 15px;
+  padding: 40px 30px;
   border-radius: 10px;
   box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);
 }

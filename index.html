@@ -30,67 +30,69 @@
   </head>
   <body>
     <div class="container">
-      <div class="dictionary-body">
-        <div
-          class="row gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
-        >
-          <div class="col-8 col-sm-7 col-md-6 col-lg-4">
-            <input
-              type="text"
-              placeholder="Type the word here.."
-              autofocus="on"
-              autocomplete="off"
-              class="search-box w-100"
-              id="input-el"
-            />
-          </div>
-          <div class="col-4 col-sm-4 col-md-2 col-lg-2">
-            <button
-              class="search-btn w-100"
-              id="button-el"
-              onclick="searchButton()"
-            >
-              Search
-            </button>
-          </div>
-        </div>
-        <div id="dictionary-el">
-          <div
-            class="row mt-4 gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
-          >
-            <div class="col-6 col-sm-5 col-md-4 col-lg-3">
-              <h1 id="word-el"></h1>
-            </div>
-            <div
-              class="col-6 col-sm-5 col-md-4 col-lg-3 d-flex justify-content-end"
-            >
-              <a href="#" id="sound-link-el">
-                <i
-                  class="fa-solid fa-volume-high sound-icon mt-3"
-                  id="icon-el"
-                ></i>
-              </a>
-            </div>
-          </div>
+      <div class="dictionary-app">
+        <div class="dictionary-body">
           <div
             class="row gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
           >
-            <div class="col-12 col-sm-10 col-md-8 col-lg-6">
-              <span id="word-type-el" class="w-100"></span>
-              <span id="pronouns-el" class="w-100"></span>
+            <div class="col-7 col-sm-7 col-md-6 col-lg-4">
+              <input
+                type="text"
+                placeholder="Type the word here.."
+                autofocus="on"
+                autocomplete="off"
+                class="search-box w-100"
+                id="input-el"
+              />
+            </div>
+            <div class="col-5 col-sm-4 col-md-3 col-lg-3">
+              <button
+                class="search-btn w-100"
+                id="button-el"
+                onclick="searchButton()"
+              >
+                Search
+              </button>
             </div>
           </div>
-          <div
-            class="row mt-4 gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
-          >
-            <div class="col-12 col-sm-10 col-md-8 col-lg-6">
-              <span class="w-100" id="meaning-el"></span>
+          <div id="dictionary-el">
+            <div
+              class="row mt-4 gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
+            >
+              <div class="col-6 col-sm-5 col-md-4 col-lg-3">
+                <h1 id="word-el"></h1>
+              </div>
+              <div
+                class="col-6 col-sm-5 col-md-4 col-lg-3 d-flex justify-content-end"
+              >
+                <a href="#" id="sound-link-el">
+                  <i
+                    class="fa-solid fa-volume-high sound-icon mt-3"
+                    id="icon-el"
+                  ></i>
+                </a>
+              </div>
             </div>
+            <div
+              class="row gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
+            >
+              <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+                <span id="word-type-el" class="w-100"></span>
+                <span id="pronouns-el" class="w-100"></span>
+              </div>
+            </div>
+            <div
+              class="row mt-4 gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
+            >
+              <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+                <span class="w-100" id="meaning-el"></span>
+              </div>
+            </div>
+            <div
+              class="row mt-4 gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
+              id="examplesColContainer-el"
+            ></div>
           </div>
-          <div
-            class="row mt-4 gx-3 gx-lg-5 gx-md-4 gx-sm-4 d-flex justify-content-center"
-            id="examplesColContainer-el"
-          ></div>
         </div>
       </div>
     </div>
