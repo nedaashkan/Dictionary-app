@@ -13,7 +13,6 @@ let playWordSound;
 let audio;
 let soundLink;
 let dictionary = document.getElementById("dictionary-el");
-// dictionary.style.display = "none";
 let exampleArray = [];
 let displayExamplesRowContainer = document.getElementById(
   "examplesColContainer-el"
@@ -23,7 +22,6 @@ function searchButton() {
   if (inputValue.value.length <= 0) {
     console.log("please write something");
   } else {
-    // dictionary.style.display = "block";
     searchWord(inputValue.value);
   }
 }
@@ -41,13 +39,9 @@ function displayAnswer(response) {
   wordSound = play(response.data[0].phonetics);
   exampleArray = displayExamples(response.data[0].meanings[0].definitions);
 }
-// examples display
 function displayMeanings(meaningArray) {
   let theMeaningArray = meaningArray;
   let liveMeaningArray = [];
-  // let randomLiveMeaningArrayIndex = Math.floor(
-  //   Math.random() * liveMeaningArray.length
-  // );
   for (let i = 0; i < theMeaningArray.length; i++) {
     if (theMeaningArray[i].definition === undefined) {
     } else {
@@ -59,14 +53,13 @@ function displayMeanings(meaningArray) {
 }
 let exampleColContainer = ` <div class="col-12 col-sm-10 col-md-8 col-lg-6">`;
 function displayExamples(exampleArray) {
-  debugger
   let theExampleArray = exampleArray;
   for (let i = 0; i < theExampleArray.length; i++) {
     if (theExampleArray[i].example === undefined) {
     } else {
       exampleColContainer =
         exampleColContainer +
-        `<div id="example-el" class="example-border w-100 mt-3">
+        `<div class="example-border col-lg-12 w-100 mt-3">
       ${theExampleArray[i].example}
       </div>
       `;
@@ -74,9 +67,10 @@ function displayExamples(exampleArray) {
   }
   exampleColContainer = exampleColContainer + `</div>`;
   displayExamplesRowContainer.innerHTML = exampleColContainer;
+  exampleColContainer = ""
+  exampleColContainer = ` <div class="col-12 col-sm-10 col-md-8 col-lg-6">`;
 }
 
-// word sound sapling
 let soundLinkIcon = document.getElementById("sound-link-el");
 soundLinkIcon.addEventListener("click", displaySound);
 function play(soundArray) {
